@@ -6,8 +6,6 @@ import ChatPanel from '../../shared-components/chatPanel/ChatPanel';
 function RightSideLayout3() {
   return (
     <>
-      <ChatPanel />
-
       <QuickPanel />
 
       <NotificationPanel />

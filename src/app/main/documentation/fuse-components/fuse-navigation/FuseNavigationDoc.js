@@ -237,6 +237,13 @@ function FuseNavigationDoc(props) {
                       icon: 'heroicons-outline:chart-pie',
                       url: '/dashboards/analytics',
                     },
+                    {
+                      id: 'dashboards.dashboard',
+                      title: 'Dashboard',
+                      type: 'item',
+                      icon: 'heroicons-outline:view-boards',
+                      url: '/dashboards/dashboard',
+                    },
                   ],
                 },
                 {

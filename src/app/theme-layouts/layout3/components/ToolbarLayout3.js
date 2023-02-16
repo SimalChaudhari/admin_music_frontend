@@ -49,24 +49,6 @@ function ToolbarLayout3(props) {
           </div>
 
           <div className="flex items-center px-8 md:px-0 h-full overflow-x-auto">
-            <Hidden smUp>
-              <NavigationSearch />
-            </Hidden>
-
-            <Hidden lgUp>
-              <ChatPanelToggleButton />
-            </Hidden>
-
-            <LanguageSwitcher />
-
-            <AdjustFontSize />
-
-            <FullScreenToggle />
-
-            <QuickPanelToggleButton />
-
-            <NotificationPanelToggleButton />
-
             <UserMenu />
           </div>
         </Toolbar>

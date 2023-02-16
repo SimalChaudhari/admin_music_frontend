@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import FuseShortcuts from '@fuse/core/FuseShortcuts';
 import { selectFlatNavigation } from 'app/store/fuse/navigationSlice';
 import { selectUserShortcuts, updateUserShortcuts } from 'app/store/userSlice';
 
@@ -13,14 +12,7 @@ function NavigationShortcuts(props) {
     dispatch(updateUserShortcuts(newShortcuts));
   }
 
-  return (
-    <FuseShortcuts
-      className={className}
-      variant={variant}
-      navigation={navigation}
-      shortcuts={shortcuts}
-      onChange={handleShortcutsChange}
-    />
+  return (<></>
   );
 }
 

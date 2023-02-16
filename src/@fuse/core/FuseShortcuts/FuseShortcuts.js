@@ -159,69 +159,6 @@ function FuseShortcuts(props) {
           </motion.div>
         );
       }, [addMenu, props.variant, shortcutItems])}
-
-      <Menu
-        id="add-menu"
-        anchorEl={addMenu}
-        open={Boolean(addMenu)}
-        onClose={addMenuClose}
-        classes={{
-          paper: 'min-w-256',
-        }}
-        TransitionProps={{
-          onEntered: () => {
-            searchInputRef.current.focus();
-          },
-          onExited: () => {
-            setSearchText('');
-          },
-        }}
-      >
-        <div className="p-16 pt-8">
-          <Input
-            inputRef={searchInputRef}
-            value={searchText}
-            onChange={search}
-            placeholder="Search for an app or page"
-            className=""
-            fullWidth
-            inputProps={{
-              'aria-label': 'Search',
-            }}
-            disableUnderline
-          />
-        </div>
-
-        <Divider />
-
-        {searchText.length !== 0 &&
-          searchResults &&
-          searchResults.map((_item) => (
-            <ShortcutMenuItem
-              key={_item.id}
-              item={_item}
-              onToggle={() => toggleInShortcuts(_item.id)}
-            />
-          ))}
-
-        {searchText.length !== 0 && searchResults.length === 0 && (
-          <Typography color="text.secondary" className="p-16 pb-8">
-            No results..
-          </Typography>
-        )}
-
-        {searchText.length === 0 &&
-          shortcutItems.map(
-            (_item) =>
-              _item && (
-                <ShortcutMenuItem
-                  key={_item.id}
-                  item={_item}
-                  onToggle={() => toggleInShortcuts(_item.id)}
-                />
-              )
-          )}
-      </Menu>
     </div>
   );
 }
