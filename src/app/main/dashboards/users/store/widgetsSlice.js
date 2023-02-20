@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const getWidgets = createAsyncThunk('projectDashboardApp/widgets/getWidgets', async () => {
+export const getWidgets = createAsyncThunk('usersApp/widgets/getWidgets', async () => {
   const response = await axios.get('/api/dashboards/project/widgets');
   const data = await response.data;
 
@@ -9,7 +9,7 @@ export const getWidgets = createAsyncThunk('projectDashboardApp/widgets/getWidge
 });
 
 const widgetsSlice = createSlice({
-  name: 'projectDashboardApp/widgets',
+  name: 'usersApp/widgets',
   initialState: null,
   reducers: {},
   extraReducers: {
@@ -17,6 +17,6 @@ const widgetsSlice = createSlice({
   },
 });
 
-export const selectWidgets = ({ projectDashboardApp }) => projectDashboardApp.widgets;
+export const selectWidgets = ({ usersApp }) => usersApp.widgets;
 
 export default widgetsSlice.reducer;

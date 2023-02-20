@@ -51,4 +51,4 @@ function UsersApp(props) {
   );
 }
 
-export default withReducer('UsersApp', reducer)(UsersApp);
+export default withReducer('usersApp', reducer)(UsersApp);

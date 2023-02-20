@@ -2,7 +2,7 @@ import { createAsyncThunk, createEntityAdapter, createSlice } from '@reduxjs/too
 import axios from 'axios';
 
 export const getProjects = createAsyncThunk(
-  'projectDashboardApp/projects/getProjects',
+  'artistApp/projects/getProjects',
   async () => {
     const response = await axios.get('/api/dashboards/project/projects');
     return response.data;
@@ -15,10 +15,10 @@ export const {
   selectAll: selectProjects,
   selectEntities: selectProjectsEntities,
   selectById: selectProjectById,
-} = projectsAdapter.getSelectors((state) => state.projectDashboardApp.projects);
+} = projectsAdapter.getSelectors((state) => state.artistApp.projects);
 
 const projectsSlice = createSlice({
-  name: 'projectDashboardApp/projects',
+  name: 'artistApp/projects',
   initialState: projectsAdapter.getInitialState(),
   reducers: {},
   extraReducers: {

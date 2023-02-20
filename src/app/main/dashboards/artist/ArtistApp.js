@@ -21,7 +21,7 @@ const Root = styled(FusePageSimple)(({ theme }) => ({
   },
 }));
 
-function ProjectDashboardApp(props) {
+function ArtistApp(props) {
   const dispatch = useDispatch();
   const widgets = useSelector(selectWidgets);
 
@@ -51,4 +51,4 @@ function ProjectDashboardApp(props) {
   );
 }
 
-export default withReducer('projectDashboardApp', reducer)(ProjectDashboardApp);
+export default withReducer('artistApp', reducer)(ArtistApp);
