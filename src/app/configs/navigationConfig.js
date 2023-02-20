@@ -27,11 +27,11 @@ const navigationConfig = [
         url: '/dashboards/dashboard',
       },
       {
-        id: 'dashboards.artist',
-        title: 'Artist',
+        id: 'dashboards.artists',
+        title: 'Artists',
         type: 'item',
         icon: 'heroicons-outline:clipboard-check',
-        url: '/dashboards/artist',
+        url: '/dashboards/artists',
       },
       {
         id: 'dashboards.users',

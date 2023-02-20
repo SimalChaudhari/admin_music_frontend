@@ -10,7 +10,7 @@ const ArtistAppConfig = {
   },
   routes: [
     {
-      path: 'dashboards/artist',
+      path: 'dashboards/artists',
       element: <ArtistApp />,
     },
   ],
